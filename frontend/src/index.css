@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #F4F7FB;
+  color: #1E293B;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Clean Subtle Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Realistic Stratigraphic Rock Lithology Patterns */
+.litho-sandstone {
+  background: linear-gradient(180deg, #E6CCB2 0%, #DDB892 50%, #E6CCB2 100%);
+  background-size: 100% 18px;
+}
+.litho-coal-shale {
+  background: repeating-linear-gradient(
+    180deg,
+    #6B5B53 0px,
+    #52433C 6px,
+    #3D312A 12px,
+    #6B5B53 18px
+  );
+}
+.litho-kopili-shale {
+  background: repeating-linear-gradient(
+    180deg,
+    #94A3B8 0px,
+    #64748B 5px,
+    #78869B 10px
+  );
+}
