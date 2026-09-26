@@ -1,0 +1,9 @@
+{
+  "name": "ertmac-nwis",
+  "version": "2.4.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix frontend",
+    "dev": "npm run dev --prefix frontend"
+  }
+}

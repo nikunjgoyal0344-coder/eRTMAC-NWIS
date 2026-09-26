@@ -38,6 +38,7 @@ import { DocumentIngestionStudio } from './components/DocumentIngestionStudio';
 import { Phase4GovernanceAndTrends } from './components/Phase4GovernanceAndTrends';
 import { SecurityCommandCenter } from './components/SecurityCommandCenter';
 import { ExplainAlertModal } from './components/ExplainAlertModal';
+import defaultDataset from './data/nwis_dataset.json';
 
 export type NavScreen =
   | 'dashboard'
@@ -61,13 +62,14 @@ export function App() {
   const [isLightMode, setIsLightMode] = useState<boolean>(true);
   const [mfaUnlocked, setMfaUnlocked] = useState<boolean>(true);
 
-  const [wells, setWells] = useState<WellSummary[]>([]);
-  const [formations, setFormations] = useState<FormationLayer[]>([]);
-  const [trajectories, setTrajectories] = useState<Record<string, SurveyPoint[]>>({});
-  const [wellLogs, setWellLogs] = useState<Record<string, TelemetrySample[]>>({});
-  const [events, setEvents] = useState<DrillingEvent[]>([]);
-  const [documents, setDocuments] = useState<HistoricalDocument[]>([]);
-  const [auditLogs, setAuditLogs] = useState<AuditLogEntry[]>([]);
+  const initialData: any = defaultDataset || {};
+  const [wells, setWells] = useState<WellSummary[]>(initialData.wells || []);
+  const [formations, setFormations] = useState<FormationLayer[]>(initialData.formations || []);
+  const [trajectories, setTrajectories] = useState<Record<string, SurveyPoint[]>>(initialData.trajectories || {});
+  const [wellLogs, setWellLogs] = useState<Record<string, TelemetrySample[]>>(initialData.wellLogs || {});
+  const [events, setEvents] = useState<DrillingEvent[]>(initialData.events || []);
+  const [documents, setDocuments] = useState<HistoricalDocument[]>(initialData.documents || []);
+  const [auditLogs, setAuditLogs] = useState<AuditLogEntry[]>(initialData.auditLogs || []);
 
   useEffect(() => {
     fetch('/api/dataset')
