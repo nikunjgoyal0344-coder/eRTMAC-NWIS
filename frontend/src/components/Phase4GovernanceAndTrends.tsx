@@ -146,11 +146,11 @@ export const Phase4GovernanceAndTrends: React.FC<Phase4GovernanceAndTrendsProps>
           <div>
             <div className="flex items-center gap-2.5">
               <h2 className="text-lg font-black text-[#1E3A8A] tracking-tight">
-                6. Reports, Multi-Well Benchmarking &amp; SHA-256 Governance
+                Reports, Multi-Well Benchmarking &amp; Governance
               </h2>
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-300 flex items-center gap-1">
                 <Lock className="w-3 h-3 text-emerald-600" />
-                AIR-GAPPED ON-PREM AI • SHA-256 VERIFIED
+                INTEGRITY VERIFIED
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">

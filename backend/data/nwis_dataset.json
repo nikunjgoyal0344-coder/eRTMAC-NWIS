@@ -10607,6 +10607,127 @@
   },
   "documents": [
     {
+      "document_id": "DOC-A370FE",
+      "well_id": "W-093",
+      "document_type": "Scanned Hardcopy Daily Drilling Report (DDR)",
+      "filename": "Scanned_DDR_W093_1998_Barail.pdf",
+      "date": "2026-09-27",
+      "author": "Hardcopy OCR Digitization Pipeline (Duliajan Archive)",
+      "pages": 1,
+      "formation": "Barail Coal-Shale",
+      "depth_interval": "3408 m – 3453 m",
+      "summary": "OCR-digitized hardcopy report 'Scanned_DDR_W093_1998_Barail.pdf': Extracted MUD_LOSS event at 3428 m in Barail Coal-Shale (15.2 bbl/hr).",
+      "extracted_entities": {
+        "well": "W-093",
+        "depth_m": 3428,
+        "formation": "Barail Coal-Shale",
+        "event": "MUD_LOSS",
+        "severity": "HIGH",
+        "loss_rate_bbl_hr": 15.2,
+        "mitigation": "25 bbl Bimodal LCM Pill (15 ppb Nut-Plug + 10 ppb Mica + 45 ppb CaCO3)",
+        "outcome": "Losses stabilized & indexed into pgvector"
+      },
+      "deep_analysis": {
+        "classification_level": "RESTRICTED • MoPNG / OIL STRATEGIC ASSET (LEVEL-4)",
+        "encryption_cipher": "AES-256-GCM (On-Premise Hardware HSM Vault)",
+        "authorized_uploader": "DRILLING_ENGINEER (ENG-DULIAJAN-01)",
+        "digitized_graph": {
+          "graph_title": "Digitized Chart from Scanned_DDR_W093_1998_Barail.pdf: ECD (SG) vs. Mud Loss Rate (bbl/hr) across Barail Coal-Shale",
+          "x_axis": "Depth (m MD)",
+          "y1_axis": "Mud Loss Rate (bbl/hr)",
+          "y2_axis": "Equivalent Circulating Density - ECD (SG)",
+          "frac_limit_sg": 1.275,
+          "series": [
+            {
+              "depth": 3400,
+              "ecd_sg": 1.242,
+              "loss_bbl_hr": 0.4,
+              "torque_knm": 17.8
+            },
+            {
+              "depth": 3410,
+              "ecd_sg": 1.258,
+              "loss_bbl_hr": 1.8,
+              "torque_knm": 19.4
+            },
+            {
+              "depth": 3420,
+              "ecd_sg": 1.276,
+              "loss_bbl_hr": 6.5,
+              "torque_knm": 24.2
+            },
+            {
+              "depth": 3428,
+              "ecd_sg": 1.289,
+              "loss_bbl_hr": 15.2,
+              "torque_knm": 33.4
+            },
+            {
+              "depth": 3438,
+              "ecd_sg": 1.245,
+              "loss_bbl_hr": 2.1,
+              "torque_knm": 21
+            },
+            {
+              "depth": 3450,
+              "ecd_sg": 1.236,
+              "loss_bbl_hr": 0.3,
+              "torque_knm": 18.2
+            }
+          ]
+        },
+        "engineering_tables": {
+          "mud_rheology": {
+            "mud_type": "KCl-PHPA Polymer Inhibited Water-Based Mud",
+            "mud_weight_sg": "1.24 SG (Trimmed to 1.20 SG post-pill)",
+            "funnel_viscosity_sec": "52 sec/qt",
+            "plastic_viscosity_cp": "24 cP",
+            "yield_point_lb100sqft": "28 lb/100ft²",
+            "filtrate_api_ml": "4.2 mL / 30 min",
+            "lcm_composition": "45 ppb Sized CaCO3 (D50=75µm) + 15 ppb Resilient Graphite"
+          },
+          "bha_casing": {
+            "bit_size_type": "8.5\" PDC 6-Blade (IADC M323) • TFA 0.92 in²",
+            "last_casing_shoe": "9-5/8\" Casing @ 3,180 m TVD (Shoe FIT: 1.42 SG)",
+            "open_hole_interval": "3,180 m – 3453 m",
+            "npt_breakdown": "14.5 hrs Circulation / Pill Squeeze + 6.0 hrs Wiper Trip"
+          }
+        },
+        "sensitive_data_dlp": {
+          "risk_score": "HIGH_SENSITIVITY_NATIONAL_INFRASTRUCTURE",
+          "total_sensitive_entities": 4,
+          "findings": [
+            {
+              "category": "STRATEGIC_GPS_COORDINATES",
+              "raw_value": "Lat 27°21'48.4\"N, Long 95°19'14.2\"E (UTM Zone 46N 729410E 3028450N)",
+              "redacted_value": "Lat 27°21'[REDACTED]\"N, Long 95°19'[REDACTED]\"E (Duliajan Block)",
+              "policy": "MoPNG / DGH National Data Repository Geodetic Masking Rule"
+            },
+            {
+              "category": "HYDROCARBON_RESERVE_ESTIMATE",
+              "raw_value": "Net Pay 28.4m in Barail Main Sand • Est. In-Place 14.8 MMbbl Oil / 42 BCF Gas",
+              "redacted_value": "Net Pay [REDACTED-RESERVE-DATA] • Price-Sensitive PSU Discovery",
+              "policy": "SEBI / OIL Unpublished Price-Sensitive Reserve Protection"
+            },
+            {
+              "category": "COMMERCIAL_RIG_CONTRACT_COST",
+              "raw_value": "Charter Rig Day-Rate ₹18.45 Lakhs/day (Contract #OIL/DRG/DUL/2024-89)",
+              "redacted_value": "Charter Rig Day-Rate [REDACTED-COMMERCIAL] (Contract #[REDACTED])",
+              "policy": "PSU Commercial & Vendor Confidentiality Clause"
+            },
+            {
+              "category": "PERSONNEL_PII_SIGNATURES",
+              "raw_value": "Signed: Er. R.K. Borthakur (Emp #40892, +91-94350-XXXXX) & Dr. S. Gogoi",
+              "redacted_value": "Signed: [REDACTED-ROLE: NIGHT_TOOLPUSHER] & [REDACTED-ROLE: WELL_SITE_GEOLOGIST]",
+              "policy": "DPDP Act 2023 & CERT-In Personnel Privacy Guard"
+            }
+          ]
+        }
+      },
+      "verbatim_excerpt": "At 3,428 m in Barail Coal-Shale formation (Lat 27°21'48.4\"N, Long 95°19'14.2\"E), partial to severe mud losses of 15.2 bbl/hr were observed accompanied by torque spike to 33.4 kNm. Net Pay 28.4m (Est. 14.8 MMbbl). Pumped 25 bbl bimodal LCM pill (15 ppb Nut-Plug + 10 ppb Coarse Flake Mica + 45 ppb Sized CaCO3). Signed: Er. R.K. Borthakur.",
+      "sha256_fingerprint": "a370fef749295ecbe1b1d7abacb655bfa53648e673697d74758e82c5f50b2887"
+    },
+    {
       "document_id": "DOC-A41615",
       "well_id": "W-093",
       "document_type": "Scanned Hardcopy DDR / WCR",
@@ -10901,6 +11022,126 @@
     }
   ],
   "auditLogs": [
+    {
+      "log_id": "AUD-2026-015",
+      "timestamp": "2026-09-27T18:43:10.984Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "APPLY_STRESS_CAGING_SCENARIO",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Applied Hydraulics & Stress-Caging Scenario on W-101: MW=1.56 sg, Q=2500 LPM, LCM=76 ppb. Mud Loss Risk reduced from 84% to 52% (11.8 hrs NPT / INR 21.8 Lakhs saved).",
+      "sha256_signature": "93db1a41e4deea51d46b782d52ad857440626498e315adbeef7c2989044454de"
+    },
+    {
+      "log_id": "AUD-2026-014",
+      "timestamp": "2026-09-27T18:43:00.384Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "APPLY_STRESS_CAGING_SCENARIO",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Applied Hydraulics & Stress-Caging Scenario on W-101: MW=1.22 sg, Q=1750 LPM, LCM=25 ppb. Mud Loss Risk reduced from 84% to 18% (24.4 hrs NPT / INR 45.1 Lakhs saved).",
+      "sha256_signature": "92491282c99f4927de029ad517e10b0eb9604954e7fcfd1afa0a2e215b9ff72b"
+    },
+    {
+      "log_id": "AUD-2026-013",
+      "timestamp": "2026-09-27T18:42:55.950Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "APPLY_STRESS_CAGING_SCENARIO",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Applied Hydraulics & Stress-Caging Scenario on W-101: MW=1.22 sg, Q=1750 LPM, LCM=25 ppb. Mud Loss Risk reduced from 84% to 18% (24.4 hrs NPT / INR 45.1 Lakhs saved).",
+      "sha256_signature": "984a504dd21d81db10babbeb77e8530e767058683d861607d296e93c32d1ffe4"
+    },
+    {
+      "log_id": "AUD-2026-012",
+      "timestamp": "2026-09-27T18:10:57.650Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "SHA256_INTEGRITY_AUDIT",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Verified cryptographic SHA-256 chain across 10 OIL reports & 11 audit entries.",
+      "sha256_signature": "88ac8726013e1f688fd2f587679f190e4ce1f48f74a138cce867a5c94b3bace3"
+    },
+    {
+      "log_id": "AUD-2026-011",
+      "timestamp": "2026-09-27T17:58:59.088Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "5_LAYER_SECURITY_SELF_TEST",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Verified 11 PDFs & 10 Audit Blocks. Merkle Root: c00b932ee48af46f3ce5...",
+      "sha256_signature": "7902d35c1efde6759c2186e1ad13349cc757cd9fffef61fd99387298c2395c6e"
+    },
+    {
+      "log_id": "AUD-2026-010",
+      "timestamp": "2026-09-27T17:58:57.924Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "5_LAYER_SECURITY_SELF_TEST",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Verified 11 PDFs & 9 Audit Blocks. Merkle Root: 7791bef93dbbefe3f22a...",
+      "sha256_signature": "599d2723d2b4ee8bc0800cade26092b0efe20e78c8d83d63f3a5aa5c1da4b526"
+    },
+    {
+      "log_id": "AUD-2026-009",
+      "timestamp": "2026-09-27T08:54:29.625Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "EXPORT_HANDOVER_REPORT",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Exported signed shift handover & look-ahead mitigation dossier for W-101 at 3385.0m (DRILLING_ENGINEER)",
+      "sha256_signature": "9d1b7b23efa6b2c57d59b6052c986e2c22c5ff2a53924c2880836547c09a8706"
+    },
+    {
+      "log_id": "AUD-2026-008",
+      "timestamp": "2026-09-27T08:54:27.863Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "SHA256_INTEGRITY_AUDIT",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Verified cryptographic SHA-256 chain across 10 OIL reports & 7 audit entries.",
+      "sha256_signature": "1e0bcf671d0e2700d73ec06035215a90460f5b69b5cfe8f3f9c424b829e0573e"
+    },
+    {
+      "log_id": "AUD-2026-007",
+      "timestamp": "2026-09-27T08:53:51.304Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "INGEST_DDR_PDF",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Ingested & indexed Scanned_DDR_W093_1998_Barail.pdf (DOC-A370FE) into pgvector",
+      "sha256_signature": "e4f61d71476f9fb36e9bc37117f881bc60963f7f950e3b3582f576cc90e2c928"
+    },
+    {
+      "log_id": "AUD-2026-006",
+      "timestamp": "2026-09-27T08:50:25.244Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "XAI_ALERT_ACKNOWLEDGED",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Signed & Acknowledged 6-Point XAI Barail Mitigation Advisory at 3385.0m (DRILLING_ENGINEER)",
+      "sha256_signature": "858c5a3d0d7a6282a4d26b5d741ba844eb420310281189554b2167e51d1d0732"
+    },
+    {
+      "log_id": "AUD-2026-005",
+      "timestamp": "2026-09-27T08:50:24.260Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "XAI_ALERT_ACKNOWLEDGED",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Signed & Acknowledged 6-Point XAI Barail Mitigation Advisory at 3385.0m (DRILLING_ENGINEER)",
+      "sha256_signature": "1bc2fabec4be2abbe3b42499e844a2c68a1ee690b6fdad9ccf4a937287760bb8"
+    },
+    {
+      "log_id": "AUD-2026-004",
+      "timestamp": "2026-09-27T08:50:22.728Z",
+      "user_id": "ENG-DULIAJAN-01",
+      "role": "DRILLING_ENGINEER",
+      "action": "XAI_ALERT_ACKNOWLEDGED",
+      "target_id": "W-101",
+      "details": "[MFA:VERIFIED] Signed & Acknowledged 6-Point XAI Barail Mitigation Advisory at 3385.0m (DRILLING_ENGINEER)",
+      "sha256_signature": "e3b456320b5eaf56537539586d6b5898d47e8ff272cb17588732363c4b6ff89e"
+    },
     {
       "log_id": "AUD-2026-001",
       "timestamp": "2026-09-24T06:00:12Z",

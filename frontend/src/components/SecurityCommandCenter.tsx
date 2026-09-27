@@ -203,7 +203,7 @@ export const SecurityCommandCenter: React.FC<SecurityCommandCenterProps> = ({
           <div>
             <div className="flex items-center gap-2.5">
               <h2 className="text-lg font-black text-[#1E3A8A] tracking-tight">
-                7. Enterprise 5-Layer Defense-in-Depth &amp; Zero-Trust Security Center
+                Enterprise 5-Layer Defense-in-Depth &amp; Zero-Trust Security Center
               </h2>
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-300 flex items-center gap-1">
                 <Lock className="w-3 h-3 text-emerald-600" />

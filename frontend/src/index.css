@@ -2,29 +2,241 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #F4F7FB;
-  color: #1E293B;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+/* =========================================================================
+   CLEAN NON-GLOWING THEME VARIABLES (LIGHT & DARK)
+   ========================================================================= */
+
+:root {
+  --clay-bg: #F1F5F9;
+  --clay-card-bg: #FFFFFF;
+  --clay-card-border: #E2E8F0;
+  --clay-text: #0F172A;
+  --clay-text-muted: #475569;
+  --clay-inset-bg: #F8FAFC;
+  --clay-brand: #1E3A8A;
 }
 
-/* Clean Subtle Scrollbars */
+html.dark, body.dark, .dark {
+  --clay-bg: #0B0F19;
+  --clay-card-bg: #141A28;
+  --clay-card-border: rgba(255, 255, 255, 0.1);
+  --clay-text: #F8FAFC;
+  --clay-text-muted: #94A3B8;
+  --clay-inset-bg: #090D16;
+  --clay-brand: #60A5FA;
+}
+
+body {
+  background-color: var(--clay-bg);
+  color: var(--clay-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  overflow-x: hidden;
+}
+
+/* =========================================================================
+   CRISP SURFACES (ZERO FUZZY WHITE GLOW)
+   ========================================================================= */
+
+/* Clean Card Surface */
+.clay-card {
+  background-color: var(--clay-card-bg) !important;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04) !important;
+  border: 1px solid var(--clay-card-border) !important;
+  transition: all 0.2s ease;
+}
+
+.dark .clay-card {
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Compact Card */
+.clay-card-sm {
+  background-color: var(--clay-card-bg) !important;
+  border-radius: 0.875rem;
+  box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.05) !important;
+  border: 1px solid var(--clay-card-border) !important;
+  transition: all 0.2s ease;
+}
+
+.dark .clay-card-sm {
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Inset / Recessed Panels */
+.clay-inset {
+  background-color: var(--clay-inset-bg) !important;
+  border-radius: 0.875rem;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid var(--clay-card-border) !important;
+  transition: all 0.2s ease;
+}
+
+.dark .clay-inset {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+.clay-inset-sm {
+  background-color: var(--clay-inset-bg) !important;
+  border-radius: 0.625rem;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid var(--clay-card-border) !important;
+}
+
+/* =========================================================================
+   TACTILE BUTTONS (CLEAN CRISP ELEVATION - NO GLOWING AURA)
+   ========================================================================= */
+
+/* Neutral Button */
+.clay-btn {
+  background-color: var(--clay-card-bg) !important;
+  color: var(--clay-text) !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.08) !important;
+  border: 1px solid var(--clay-card-border) !important;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.clay-btn:hover {
+  box-shadow: 0 3px 6px -1px rgba(15, 23, 42, 0.12) !important;
+  transform: translateY(-1px);
+}
+
+.clay-btn:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px 0 rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Primary Vibrant Blue Button */
+.clay-btn-primary {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px -1px rgba(37, 99, 235, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.clay-btn-primary:hover {
+  background: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%) !important;
+  box-shadow: 0 4px 10px -1px rgba(37, 99, 235, 0.45) !important;
+  transform: translateY(-1px);
+}
+
+.clay-btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Danger / Emergency Alert Button */
+.clay-btn-danger {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px -1px rgba(220, 38, 38, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.clay-btn-danger:hover {
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%) !important;
+  box-shadow: 0 4px 10px -1px rgba(220, 38, 38, 0.45) !important;
+}
+
+.clay-btn-danger:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Success / Verified Security Button */
+.clay-btn-success {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px -1px rgba(5, 150, 105, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.clay-btn-success:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+  box-shadow: 0 4px 10px -1px rgba(5, 150, 105, 0.45) !important;
+}
+
+.clay-btn-success:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Badge / Pill */
+.clay-pill {
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid var(--clay-card-border) !important;
+}
+
+/* Range Slider */
+.clay-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.clay-range-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--clay-inset-bg);
+  border: 1px solid var(--clay-card-border);
+}
+
+.clay-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2563EB;
+  box-shadow: 0 1px 3px 0 rgba(37, 99, 235, 0.4);
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.clay-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Subtle Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #CBD5E1;
   border-radius: 9999px;
 }
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }
 
-/* Realistic Stratigraphic Rock Lithology Patterns */
+/* Lithology Rock Patterns */
 .litho-sandstone {
   background: linear-gradient(180deg, #E6CCB2 0%, #DDB892 50%, #E6CCB2 100%);
   background-size: 100% 18px;
@@ -45,4 +257,140 @@ body {
     #64748B 5px,
     #78869B 10px
   );
+}
+
+/* =========================================================================
+   DARK MODE OVERRIDES (HIGH CONTRAST & ZERO UNWANTED GLOW)
+   ========================================================================= */
+
+.dark .bg-white {
+  background-color: var(--clay-card-bg) !important;
+  border-color: var(--clay-card-border) !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 4px 14px -1px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark .bg-\[\#F8FAFF\],
+.dark .bg-\[\#F8FAFC\],
+.dark .bg-blue-50\/70,
+.dark .bg-blue-50\/80,
+.dark .bg-blue-50\/90 {
+  background-color: var(--clay-inset-bg) !important;
+  color: #F8FAFC !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark .border-slate-100,
+.dark .border-slate-200,
+.dark .border-slate-300,
+.dark .border-blue-100,
+.dark .border-blue-200 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Text Colors */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #F8FAFC !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-\[\#0F172A\],
+.dark .text-\[\#1E293B\] {
+  color: #FFFFFF !important;
+}
+
+.dark .text-\[\#1E3A8A\],
+.dark .text-\[\#1D4ED8\],
+.dark .text-blue-900,
+.dark .text-blue-800,
+.dark .text-blue-700 {
+  color: #60A5FA !important;
+}
+
+.dark .text-slate-700,
+.dark .text-slate-600 {
+  color: #CBD5E1 !important;
+}
+
+.dark .text-slate-500,
+.dark .text-slate-400 {
+  color: #94A3B8 !important;
+}
+
+/* Badges */
+.dark .text-emerald-900,
+.dark .text-emerald-800,
+.dark .text-emerald-700 {
+  color: #34D399 !important;
+}
+.dark .bg-emerald-50,
+.dark .bg-emerald-100 {
+  background-color: rgba(6, 78, 59, 0.45) !important;
+  border-color: rgba(52, 211, 153, 0.35) !important;
+}
+
+.dark .text-red-900,
+.dark .text-red-800,
+.dark .text-red-700,
+.dark .text-red-600 {
+  color: #F87171 !important;
+}
+.dark .bg-red-50,
+.dark .bg-red-100,
+.dark .bg-red-200 {
+  background-color: rgba(127, 29, 29, 0.4) !important;
+  border-color: rgba(248, 113, 113, 0.35) !important;
+}
+
+.dark .text-amber-900,
+.dark .text-amber-800,
+.dark .text-amber-700 {
+  color: #FBBF24 !important;
+}
+.dark .bg-amber-50,
+.dark .bg-amber-100 {
+  background-color: rgba(120, 53, 15, 0.4) !important;
+  border-color: rgba(251, 191, 36, 0.35) !important;
+}
+
+/* Form Controls */
+.dark input[type="text"],
+.dark input[type="number"],
+.dark select,
+.dark textarea {
+  background-color: #090D16 !important;
+  color: #F8FAFC !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.dark select option {
+  background-color: #141A28 !important;
+  color: #F8FAFC !important;
+}
+
+/* SVG Chart lines in dark mode */
+.dark line[stroke="#E2E8F0"] {
+  stroke: rgba(255, 255, 255, 0.12) !important;
+}
+.dark line[stroke="#F1F5F9"] {
+  stroke: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Light mode high contrast text */
+:not(.dark) .text-slate-500 {
+  color: #475569 !important;
+}
+:not(.dark) .text-slate-600 {
+  color: #334155 !important;
+}
+:not(.dark) .text-slate-700 {
+  color: #1E293B !important;
 }

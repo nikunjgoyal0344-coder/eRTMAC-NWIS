@@ -75,11 +75,11 @@ export const InstitutionalMemoryRAG: React.FC<InstitutionalMemoryRAGProps> = ({
             <div>
               <div className="flex items-center gap-2.5">
                 <h2 className="text-lg font-black text-[#1E3A8A] tracking-tight">
-                  5. AI Insights &amp; Institutional Memory RAG Search
+                  AI Insights &amp; Institutional Knowledge Search
                 </h2>
                 <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-300 flex items-center gap-1">
                   <Lock className="w-3 h-3 text-emerald-600" />
-                  PGVECTOR + BGE-M3 HYBRID SEARCH
+                  VERIFIED KNOWLEDGE BASE
                 </span>
               </div>
               <p className="text-xs text-slate-500 mt-0.5">

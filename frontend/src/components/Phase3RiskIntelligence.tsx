@@ -73,7 +73,7 @@ export const Phase3RiskIntelligence: React.FC<Phase3RiskIntelligenceProps> = ({
           <div>
             <div className="flex items-center gap-2.5">
               <h2 className="text-lg font-black text-[#1E3A8A] tracking-tight">
-                4. Offset Risk Analysis &amp; Multi-Variate Analog Similarity Engine
+                Offset Risk Analysis &amp; Analog Similarity Engine
               </h2>
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-red-50 text-red-700 border border-red-200">
                 HIGH ALERT • BARAIL LOSS ZONE (+{distToHazard.toFixed(0)} m)
